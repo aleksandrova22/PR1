@@ -1,0 +1,17 @@
+<fieldset class="bg">
+
+    <span> До нового года осталось: {{ timeX }} дней</span>
+
+</fieldset>
+
+<fieldset>
+    <legend>Введите размер снеговика</legend>
+    <input [(ngModel)]="val" type="number" /><br />
+    <button (click)="toggleCondition()">Нажимай</button>
+    @if((condition)) { <div class="flex">
+        <div class="round" [style.width.px]="val/6"></div>
+        <div class="round" [style.width.px]="val/3"></div>
+        <div class="round" [style.width.px]="val/2"></div>
+    </div> }
+
+</fieldset>
